@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include <time.h>
 
-int random(int minimo, int maximo){
+int randomNumber(int minimo, int maximo){
     int num;
     num = (rand() %  (maximo - minimo + 1)) + minimo;
     return num;
@@ -16,13 +16,13 @@ int main(){
     srand(time(NULL));
 
 
-    tamanho = random(2,100);
+    tamanho = randomNumber(2,100);
     printf("Tamanho %d\n", tamanho);
     
     int vetor[tamanho];
 
     for (int i = 0; i < tamanho; i++) {
-        vetor[i] = random(-100, 100);
+        vetor[i] = randomNumber(-100, 100);
     }
 
     trocado = 1;

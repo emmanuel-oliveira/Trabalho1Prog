@@ -1,8 +1,14 @@
 #include <stdio.h>
-#include <math.h>
 
+int potencia(int numero, int pot){
+    int resultado = numero;
+    for(int i = 1; i < pot; i++){
+        resultado = resultado * numero;
+    }
+    return resultado;
+}
 int main(){
-
+    
     int quant_numeros_na_sequentcia = 5;
     int numerador = 2;
     int divisor = 2;
@@ -48,7 +54,7 @@ int main(){
 
 
     printf("\n-----------------------Somatorio-----------------------\n");
-    numeradorDisplay = pow(2, quant_numeros_na_sequentcia);
+    numeradorDisplay = potencia(2, quant_numeros_na_sequentcia);
     printf("%d/%d\n", numeradorDisplay, divisorDiplay);
     printf("%lf \n", somatorio);
 
